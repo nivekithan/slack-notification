@@ -15,8 +15,8 @@ jobs:
         with:
           channel-id: C03NC5UBXKK
           payload: |
-          {
-	          "blocks": [
+            {
+	            "blocks": [
 		          {
 			          "type": "header",
 			          "text": {
@@ -43,7 +43,7 @@ jobs:
 			          }
 		          }
 	        ]
-        }
+          }
 
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
