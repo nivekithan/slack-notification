@@ -4,6 +4,9 @@ on:
     branches:
       - master
       - development
+   paths:
+    - manifest/manifest.yml
+
 
 jobs:
 
