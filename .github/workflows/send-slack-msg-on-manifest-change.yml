@@ -14,6 +14,36 @@ jobs:
         uses: slackapi/slack-github-action@v1.21.0
         with:
           channel-id: C03NC5UBXKK
-          slack-message: "Getting the branch in which this happened ${{ github.ref_name }}"
+          payload: |
+          {
+	          "blocks": [
+		          {
+			          "type": "header",
+			          "text": {
+				          "type": "plain_text",
+				          "text": "Manifest File changed",
+				          "emoji": true
+			          }
+		          },
+		          {
+			          "type": "section",
+			          "text": {
+				          "type": "mrkdwn",
+				          "text": "Slack manifest file has been changed on branch `master`. Update the manifest file at api.slack.com"
+			          },
+			          "accessory": {
+				          "type": "button",
+				          "text": {
+					          "type": "plain_text",
+					          "text": "Go to new manifest",
+					          "emoji": true
+				            },
+				          "style": "primary",
+				          "url": "https://google.com"
+			          }
+		          }
+	        ]
+        }
+
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
