@@ -6,7 +6,9 @@ on:
       - development
 
 jobs:
+
   send-slack-notification:
+    runs-on: ubuntu-latest
     steps:
       - name: Posts that manifest style has been changed
         uses: slackapi/slack-github-action@v1.21.0
