@@ -4,11 +4,9 @@ on:
     branches:
       - master
     paths:
-    - manifest/manifest.yml
-
+      - manifest/manifest.yml
 
 jobs:
-
   send-slack-notification:
     runs-on: ubuntu-latest
     steps:
