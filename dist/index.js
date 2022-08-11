@@ -2848,10 +2848,12 @@ __nccwpck_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(_actions_core__WEBPACK_IMPORTED_MODULE_0__);
 
 try {
-    const githubToken = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("githubToken");
+    const githubToken = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("github-token", { required: true });
     console.log(`github token is ${githubToken}`);
 }
-catch (err) { }
+catch (err) {
+    console.log(err);
+}
 
 })();
 
