@@ -6,19 +6,23 @@ specifiers:
   '@swc/cli': ^0.1.57
   '@swc/core': ^1.2.224
   '@types/node': ^18.7.1
+  '@vercel/ncc': ^0.34.0
   chokidar: ^3.5.3
   concurrently: ^7.3.0
   nodemon: ^2.0.19
+  typescript: ^4.7.4
 
 dependencies:
   '@actions/core': 1.9.1
   '@actions/github': 5.0.3
   concurrently: 7.3.0
+  typescript: 4.7.4
 
 devDependencies:
   '@swc/cli': 0.1.57_@swc+core@1.2.224+chokidar@3.5.3
   '@swc/core': 1.2.224
   '@types/node': 18.7.1
+  '@vercel/ncc': 0.34.0
   chokidar: 3.5.3
   nodemon: 2.0.19
 
@@ -340,6 +344,11 @@ packages:
 
   /@types/node/18.7.1:
     resolution: {integrity: sha512-GKX1Qnqxo4S+Z/+Z8KKPLpH282LD7jLHWJcVryOflnsnH+BtSDfieR6ObwBMwpnNws0bUK8GI7z0unQf9bARNQ==}
+    dev: true
+
+  /@vercel/ncc/0.34.0:
+    resolution: {integrity: sha512-G9h5ZLBJ/V57Ou9vz5hI8pda/YQX5HQszCs3AmIus3XzsmRn/0Ptic5otD3xVST8QLKk7AMk7AqpsyQGN7MZ9A==}
+    hasBin: true
     dev: true
 
   /abbrev/1.1.1:
@@ -795,6 +804,12 @@ packages:
   /tunnel/0.0.6:
     resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
     engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
+    dev: false
+
+  /typescript/4.7.4:
+    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: false
 
   /undefsafe/2.0.5:
