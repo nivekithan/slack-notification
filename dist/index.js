@@ -9716,8 +9716,10 @@ try {
     const githubToken = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("github-token", { required: true });
     const octokit = (0,_actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit)(githubToken);
     const repoName = `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.owner}/${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo.repo}`;
-    const pushedBranch = `${_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref}`;
-    console.log({ repoName, pushedBranch });
+    const pushedBranch = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref.split("/").at(-1);
+    console.log(_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload);
+    if (pushedBranch === undefined)
+        throw new Error("Didn't expect pushedBranch to be undefined");
 }
 catch (err) {
     console.log(err);
