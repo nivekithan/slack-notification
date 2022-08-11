@@ -1,0 +1,8 @@
+name: "slack-manifest"
+inputs:
+  github-token:
+    description: "Github token to be used for authenthication"
+    required: true
+  runs:
+    using: "node16"
+    main: "dist/index.js"
